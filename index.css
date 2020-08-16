@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 视频容器 */
+
+#container {
+    position: relative;
+    width: 1120px;
+    height: 630px;
+    /* 居中 */
+    margin: 0 auto;
+}
+
+
+/* 视频充满整个容器 */
+
+#container video {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 弹幕区域 */
+
+#text-container {
+    width: 1120px;
+    margin: 0 auto;
+    position: absolute;
+    /* 居中 */
+    left: 0;
+    right: 0;
+    top: 0;
+    /* 放置按钮被弹幕遮盖，而无法触发 */
+    bottom: 100px;
+    font-size: 22px;
+    color: #fff;
+    /* 超出区域隐藏 */
+    overflow: hidden;
+    /* 让背景浅的地方仍能够看见弹幕文字 */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 弹幕 */
+
+#text-container span {
+    position: absolute;
+    /* 不换行 */
+    white-space: nowrap;
+}
+
+
+/* 按钮 */
+
+#toggle {
+    /* 转换成块盒,独占一行 */
+    display: block;
+    /* 水平居中 */
+    margin: 20px auto;
+}
